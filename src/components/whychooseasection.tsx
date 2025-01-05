@@ -34,7 +34,26 @@ const content = [
         </div>
       ),
     },
- 
+    {
+      title: "Learn with Experts",
+      description:
+        "Join our music school and learn from experienced professionals who have mastered their craft. From vocals to instruments, our teachers are dedicated to helping you achieve your musical dreams.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--blue-500),var(--indigo-500))] flex items-center justify-center text-white">
+          Learn with Experts
+        </div>
+      ),
+    },
+    {
+      title: "Learn with Experts",
+      description:
+        "Join our music school and learn from experienced professionals who have mastered their craft. From vocals to instruments, our teachers are dedicated to helping you achieve your musical dreams.",
+      content: (
+        <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--blue-500),var(--indigo-500))] flex items-center justify-center text-white">
+          Learn with Experts
+        </div>
+      ),
+    },
   ];
   
 

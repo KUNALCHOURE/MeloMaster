@@ -5,10 +5,10 @@ import { InfiniteMovingCards } from "./ui/infinite-moving-cards";
 
 export function InfiniteMovingCardsDemo() {
   return (
-     <div className="bg- w-full h-screen flex flex-col ">
+     <div className="h-[50rem] w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative flex flex-col items-center justify-center ">
 
         <div>
-            <p className="text-black dark:text-white text-center text-4xl mt-20 mb-20">Hear Our Harmony:Voices of Success</p>
+            <p className="text-black dark:text-white text-center text-4xl mt-15 mb-20">Hear Our Harmony:Voices of Success</p>
         </div>
         <div className="flex justify-center ">
           <InfiniteMovingCards

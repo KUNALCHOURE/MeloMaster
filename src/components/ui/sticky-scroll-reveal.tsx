@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
@@ -15,18 +15,22 @@ export const StickyScroll = ({
   }[];
   contentClassName?: string;
 }) => {
-  const [activeCard, setActiveCard] = React.useState(0);
-  const ref = useRef<any>(null);
+  const [activeCard, setActiveCard] = useState(0);
+  const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-    // target: ref
-    container: ref,
+    container: ref, // Ensure this container has `overflow-y: auto` styling
     offset: ["start start", "end start"],
   });
   const cardLength = content.length;
 
+  // Precompute breakpoints for performance optimization
+  const cardsBreakpoints = useMemo(
+    () => content.map((_, index) => index / cardLength),
+    [content, cardLength]
+  );
+
+  // Update active card based on scroll progress
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
     const closestBreakpointIndex = cardsBreakpoints.reduce(
       (acc, breakpoint, index) => {
         const distance = Math.abs(latest - breakpoint);
@@ -40,6 +44,7 @@ export const StickyScroll = ({
     setActiveCard(closestBreakpointIndex);
   });
 
+  // Define background colors and gradients
   const backgroundColors = [
     "var(--slate-900)",
     "var(--black)",
@@ -56,25 +61,29 @@ export const StickyScroll = ({
   );
 
   useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
+    if (linearGradients.length > 0) {
+      setBackgroundGradient(
+        linearGradients[activeCard % linearGradients.length]
+      );
+    }
+  }, [activeCard, linearGradients]);
 
   return (
     <motion.div
+      style={{ willChange: "background-color" }}
       animate={{
-        backgroundColor: backgroundColors[activeCard % backgroundColors.length],
+        backgroundColor:
+          backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-5"
+      className="h-screen overflow-y-auto flex justify-center items-center relative space-x-10 rounded-md p-5"
       ref={ref}
     >
-      <div className="div relative flex items-start px-10 h-screen">
+      <div className="relative flex items-start px-10 h-screen">
         <div className="max-w-screen-lg">
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <motion.h2
-                initial={{
-                  opacity: 0,
-                }}
+                initial={{ opacity: 0 }}
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
@@ -83,13 +92,11 @@ export const StickyScroll = ({
                 {item.title}
               </motion.h2>
               <motion.p
-                initial={{
-                  opacity: 0,
-                }}
+                initial={{ opacity: 0 }}
                 animate={{
                   opacity: activeCard === index ? 1 : 0.3,
                 }}
-                className="text-kg text-slate-300 max-w-sm mt-10"
+                className="text-lg text-slate-300 max-w-sm mt-10"
               >
                 {item.description}
               </motion.p>
@@ -98,15 +105,19 @@ export const StickyScroll = ({
           <div className="h-40" />
         </div>
       </div>
-      <div
-        style={{ background: backgroundGradient }}
-        className={cn(
-          "hidden lg:block h-72 w-96 rounded-md bg-white sticky top-10 overflow-hidden",
-          contentClassName
-        )}
-      >
-        {content[activeCard].content ?? null}
-      </div>
+      {content && content.length > 0 ? (
+        <div
+          style={{ background: backgroundGradient }}
+          className={cn(
+            "hidden lg:block h-72 w-96 rounded-md bg-white sticky top-10 overflow-hidden justify-center",
+            contentClassName
+          )}
+        >
+          {content[activeCard]?.content ?? null}
+        </div>
+      ) : (
+        <div>No content available</div>
+      )}
     </motion.div>
   );
 };
