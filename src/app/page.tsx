@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "@/components/hero";
 import Featuredcourses from "@/components/featuredcourses";
 import Whychooseasection from "@/components/whychooseasection";
+import { InfiniteMovingCardsDemo } from "@/components/testimonialcards";
 export default function Home() {
   return (
     <>
@@ -9,6 +10,7 @@ export default function Home() {
       <Hero/>
       <Featuredcourses/>
       <Whychooseasection/>
+      <InfiniteMovingCardsDemo/>
      </main>
     </>
   );
