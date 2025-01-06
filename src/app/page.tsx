@@ -3,7 +3,7 @@ import Hero from "@/components/hero";
 import Featuredcourses from "@/components/featuredcourses";
 import Whychooseasection from "@/components/whychooseasection";
 import { InfiniteMovingCardsDemo } from "@/components/testimonialcards";
-import UpcommingWebminar from "@/components/Upcomingwebminar";
+import UpcommingWebinar from "@/components/Upcomingwebinar";
 export default function Home() {
   return (
     <>
@@ -12,7 +12,7 @@ export default function Home() {
       <Featuredcourses/>
       <Whychooseasection/>
       <InfiniteMovingCardsDemo/>
-      <UpcommingWebminar/>
+      <UpcommingWebinar/>
      </main>
     </>
   );
