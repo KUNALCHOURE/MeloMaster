@@ -4,6 +4,7 @@ import Featuredcourses from "@/components/featuredcourses";
 import Whychooseasection from "@/components/whychooseasection";
 import { InfiniteMovingCardsDemo } from "@/components/testimonialcards";
 import UpcommingWebinar from "@/components/Upcomingwebinar";
+import Instructors from "@/components/instructors";
 export default function Home() {
   return (
     <>
@@ -13,6 +14,7 @@ export default function Home() {
       <Whychooseasection/>
       <InfiniteMovingCardsDemo/>
       <UpcommingWebinar/>
+      <Instructors/>
      </main>
     </>
   );
