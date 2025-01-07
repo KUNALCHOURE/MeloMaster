@@ -15,7 +15,7 @@ export default function Navbar({ className }: { className?: string }){
                 </MenuItem>
                 </Link>
 
-                <Link href={'/ourcourses'}>
+                <Link href={'/courses'}>
              <MenuItem setActive={setActive} active={active} item="Courses">
              <div className="flex flex-col  space-y-6">
                  <HoveredLink href="/courses">All courses</HoveredLink>
