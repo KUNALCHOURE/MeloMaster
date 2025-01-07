@@ -15,6 +15,7 @@ export default function Home() {
       <InfiniteMovingCardsDemo/>
       <UpcommingWebinar/>
       <Instructors/>
+      
      </main>
     </>
   );
