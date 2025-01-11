@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import { AnimatedTooltip } from './ui/animated-tooltip'
 import { WavyBackground } from './ui/wavy-background';
@@ -37,7 +38,7 @@ export default function Instructors() {
   return (
     <div className="relative h-screen overflow-hidden">
     {/* Background */}
-    <WavyBackground className="absolute  w-full h-full z-0" />
+    <WavyBackground className='absolute  w-full h-full z-0' />
   
     {/* Content */}
     <div className="absolute inset-0 z-10 flex items-center justify-center text-center">
