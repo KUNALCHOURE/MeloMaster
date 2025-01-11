@@ -1,4 +1,3 @@
-import { footer } from 'framer-motion/client'
 import React from 'react'
 
 export default function Footer() {

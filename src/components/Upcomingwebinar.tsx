@@ -1,10 +1,8 @@
 'use client'
 import React from 'react'
-import coursedata from "../data/music_course.json"
 import { HoverEffect } from './ui/card-hover-effect';
 import Link from 'next/link';
-import { div, p } from 'framer-motion/client';
-import { link } from 'fs';
+
 
 const featuredWebinars = [
     {

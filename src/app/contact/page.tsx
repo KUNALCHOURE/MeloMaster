@@ -6,7 +6,11 @@ export default function page() {
     <div className='h-screen flex justify-center items-center '>
            <div className='mt-20 flex flex-col justify-center items-center '>
               <p className='text-8xl mb-10 mt-20'>Contact us</p>
-              <p className='text-center text-xl mb-10'>We're here to help with any question about our courses programs,or events.Reach out and let us know how we can assist you in your musical journey</p>
+              <p className='text-center text-xl mb-10'>
+  We&apos;re here to help with any question about our courses programs, or events. 
+  Reach out and let us know how we can assist you in your musical journey.
+</p>
+
 
               <form action="" className='mt-5 flex flex-col gap-10' >
               <TextField id="outlined-basic" label="Your Email address" variant="outlined" className=' rounded-xl bg-cyan-800'  sx={{ width: '500px' }}  />

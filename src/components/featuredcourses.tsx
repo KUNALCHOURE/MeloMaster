@@ -2,9 +2,9 @@
 import React from 'react'
 import coursedata from "../data/music_course.json"
 import { BackgroundGradient } from './ui/background-gradient';
-import Image from 'next/image';
+
 import Link from 'next/link';
-import { div, p } from 'framer-motion/client';
+
 
 interface Course{
     id:number,

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { cn } from "@/utils/cn";
+
 import { Spotlight } from "@/components/ui/Spotlight";
 import { Button } from './ui/moving-border';
 export default function Hero() {
@@ -12,7 +12,7 @@ export default function Hero() {
       />
         <div className='p-4 relative z-10 w-full text-center mt-20'>
       <h1 className='mt-24 md:mt-0 text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50  to-neutral-400' >Master the Art of Music </h1>
-      <p className='mt-6 font-normal text-base md:text-lg text-neutral-300 max-w-lg mx-auto '>Drive into our comprehensive music courses and transform your musical journey today.  wheather you're a beginer or looking to refine your skills , join us to unlock your true potential </p>
+      <p className='mt-6 font-normal text-base md:text-lg text-neutral-300 max-w-lg mx-auto'>Drive into our comprehensive music courses and transform your musical journey today.  wheather you&apos;re a beginer or looking to refine your skills , join us to unlock your true potential </p>
       </div>
       <div className="mt-8">
       <Link href='/courses'>
