@@ -6,13 +6,15 @@ import Link from "next/link";
 import CourseData from "@/data/music_course.json"
 export default function page() {
   return (
-    <div className='min-h-screen bg-black py-12 pt-36'>
-        <h1 className='text-lg md:text-7xl text-center font-sans font-bold mb-8 text-white'>All courses {CourseData.courses.length} </h1>
-
+    <div className='min-h-screen bg-black py-12 pt-36 flex  flex-col flex-wrap justify-center items-center'>
+      <div>
+        <h1 className='text-lg md:text-7xl text-center font-sans font-bold mb-8 text-white pt-5'>All courses {CourseData.courses.length} </h1>
+        </div>
+        <div className='flex flex-row flex-wrap justify-center gap-16'>
         {CourseData.courses.map((course)=>(
-        <div className='flex flex-wrap justify-center' key={course.id}>
+       
       
-       <CardContainer className="inter-var">
+       <CardContainer className="inter-var" key={course.id}>
       <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border mt-14  ">
         <CardItem
           translateZ="50"
@@ -56,9 +58,9 @@ export default function page() {
         </div>
       </CardBody>
     </CardContainer>
-    </div>
+  
       ))}
-   
+     </div>
     </div>
   )
 }
