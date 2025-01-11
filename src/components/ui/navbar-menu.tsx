@@ -76,7 +76,6 @@ export const Menu = ({
     </nav>
   );
 };
-
 export const ProductItem = ({
   title,
   description,
@@ -90,17 +89,17 @@ export const ProductItem = ({
 }) => {
   return (
     <Link href={href} className="flex space-x-2">
-      <Image
-        src={src}
-        width={140}
-        height={70}
-        alt={title}
-        className="flex-shrink-0 rounded-md shadow-2xl"
-      />
+      <div className="flex-shrink-0">
+        <Image
+          src={src}
+          width={140}
+          height={70}
+          alt={title}
+          className="rounded-md shadow-2xl"
+        />
+      </div>
       <div>
-        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">
-          {title}
-        </h4>
+        <h4 className="text-xl font-bold mb-1 text-black dark:text-white">{title}</h4>
         <p className="text-neutral-700 text-sm max-w-[10rem] dark:text-neutral-300">
           {description}
         </p>
@@ -109,13 +108,13 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, href }: { children: React.ReactNode; href: string }) => {
   return (
-    <Link
-      {...rest}
-      className="text-neutral-700 dark:text-neutral-200 hover:text-black"
-    >
-      {children}
+    <Link href={href}>
+      <span className="text-neutral-700 dark:text-neutral-200 hover:text-black">
+        {children}
+      </span>
     </Link>
   );
 };
+
