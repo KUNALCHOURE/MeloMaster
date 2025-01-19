@@ -10,12 +10,12 @@ The **Music School Webpage** is a beautifully crafted and feature-rich website d
 
 To run the project locally, follow these steps:
 
-### Prerequisites
+## Prerequisites
 Make sure you have the following installed:
 - [Node.js](https://nodejs.org/) (LTS version recommended)
 - [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-### Steps to Run
+## Steps to Run
 1. **Clone the Repository**  
    Clone the project repository to your local machine:
    ```bash
@@ -47,10 +47,19 @@ Make sure you have the following installed:
     ```bash
     npm run start
 
-### Dependencies
+## Dependencies
 - **next**: The React framework used for the project.
 - **react**: The core React library.
 - **react-dom**: React's package for DOM rendering.
 - **tailwindcss**: A utility-first CSS framework used for styling.
 
+
+## Screenshot
+
+Below is a screenshot of the Music School webpage:
+
+![Image](https://github.com/user-attachments/assets/a813c660-b395-4e93-b914-644864ed42de)
+
+
+![Image](https://github.com/user-attachments/assets/d81b4942-889d-4cca-8491-d7db61293404)
  
