@@ -60,6 +60,9 @@ Below is a screenshot of the Music School webpage:
 
 ![Image](https://github.com/user-attachments/assets/a813c660-b395-4e93-b914-644864ed42de)
 
-
+<br><br>
 ![Image](https://github.com/user-attachments/assets/d81b4942-889d-4cca-8491-d7db61293404)
  
+<br><br>
+
+ ![Image](https://github.com/user-attachments/assets/35114254-445b-4321-a9eb-ade9906cec36)
