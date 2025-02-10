@@ -1,4 +1,4 @@
-# Music School Webpage 🎵
+# MeloMaster 🎵
 
 ## Overview
 
