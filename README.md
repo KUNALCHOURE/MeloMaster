@@ -53,6 +53,8 @@ Make sure you have the following installed:
 - **react-dom**: React's package for DOM rendering.
 - **tailwindcss**: A utility-first CSS framework used for styling.
 
+## Live Demo
+Check out the live demo of the project: [MeloMaster Deployed Link](https://music-teal-seven.vercel.app/)
 
 ## Screenshot
 
